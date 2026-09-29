@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrast Ratio Checker 🎨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">Contrast Ratio Checker</span>
+            <h1>🎨 CONTRAST CHECKER</h1>
+            <p>Uji keterbacaan kombinasi warna teks dan latar belakangmu!</p>
+        </header>
+
+        <!-- Area Preview Teks -->
+        <section id="preview-box" class="preview-box">
+            <h2 id="preview-title">Halo, Dunia! 🚀</h2>
+            <p id="preview-text">Ini adalah contoh paragraf untuk menguji apakah kombinasi warna pilihanmu cukup nyaman dan jelas dibaca.</p>
+        </section>
+
+        <!-- Kontrol Picker Warna -->
+        <div class="picker-grid">
+            <!-- Picker Warna Teks -->
+            <div class="picker-group">
+                <label for="text-color">Warna Teks</label>
+                <div class="color-input-wrapper">
+                    <input type="color" id="text-color" value="#0f172a">
+                    <input type="text" id="text-hex" value="#0F172A" maxlength="7">
+                </div>
+            </div>
+
+            <!-- Picker Warna Latar -->
+            <div class="picker-group">
+                <label for="bg-color">Warna Latar</label>
+                <div class="color-input-wrapper">
+                    <input type="color" id="bg-color" value="#facc15">
+                    <input type="text" id="bg-hex" value="#FACC15" maxlength="7">
+                </div>
+            </div>
+        </div>
+
+        <!-- Hasil Skor & Status WCAG -->
+        <div class="score-card">
+            <div class="score-header">
+                <span>Rasio Kontras:</span>
+                <span id="contrast-ratio" class="ratio-number">12.5 : 1</span>
+            </div>
+
+            <!-- Indikator Aksesibilitas WCAG -->
+            <div class="status-grid">
+                <div class="status-item">
+                    <span class="status-label">Teks Normal (AA)</span>
+                    <span id="status-aa" class="status-badge bg-pass">LULUS</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Teks Besar (AAA)</span>
+                    <span id="status-aaa" class="status-badge bg-pass">LULUS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
